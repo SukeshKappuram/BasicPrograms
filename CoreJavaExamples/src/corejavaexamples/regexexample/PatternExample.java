@@ -15,7 +15,7 @@ public class PatternExample
     public static void main(String[] args)
     {
         String t = "It was the best of times";
-        Pattern pattern = Pattern.compile("the");
+        Pattern pattern = Pattern.compile("they");
         Matcher matcher = pattern.matcher(t);
         if ( matcher.find())
         {

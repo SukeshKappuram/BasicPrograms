@@ -31,6 +31,7 @@ public class ThrowExample {
 		{
 			throw new ArithmeticException();	
 		}
+                //some Code
 	         }
 	          catch(Exception e)
 	          {

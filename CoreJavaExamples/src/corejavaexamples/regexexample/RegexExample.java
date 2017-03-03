@@ -18,15 +18,15 @@ public class RegexExample {
     public static void main(String[] arg){
         String t = "Longlonglong ago, in a galaxy far far away.";
     
-        Pattern p1 = Pattern.compile("ago.*");
+        Pattern p1 = Pattern.compile("ago*");
         Matcher m1 = p1.matcher(t);
         if (m1.find()) System.out.println("Found: " + m1.group());
         
-        Pattern p2 = Pattern.compile("gal.{3}");
+        Pattern p2 = Pattern.compile("gal{3}");
         Matcher m2 = p2.matcher(t);
         if (m2.find()) System.out.println("Found: " + m2.group());
         
-        Pattern p3 = Pattern.compile("(long){2}");
+        Pattern p3 = Pattern.compile("(long).{2}");
         Matcher m3 = p3.matcher(t);
         if (m3.find()) System.out.println("Found: " + m3.group());   
         
@@ -34,7 +34,7 @@ public class RegexExample {
         System.out.println(t2);
     
         Pattern p4 = Pattern.compile("\\d\\d");
-        Matcher m4 = p1.matcher(t);
+        Matcher m4 = p4.matcher(t2);
         while (m4.find()){
             System.out.println("Found: " + m4.group());
         }
@@ -45,7 +45,7 @@ public class RegexExample {
         
         Pattern p6 = Pattern.compile("\\Sin\\S");
         Matcher m6 = p6.matcher(t2);
-        if (m3.find()) System.out.println("Found: " + m3.group()); 
+        if (m6.find()) System.out.println("Found: " + m6.group()); 
         
         String t3 = "It was the best of times";
 

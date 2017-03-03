@@ -16,30 +16,24 @@ import java.util.logging.Logger;
  */
 public class ThrowsExample {
     public static int readByteFromFile()throws IOException {
-        try (InputStream in = new FileInputStream("a.txt")) {
+        try (InputStream in = new FileInputStream("a.txt");
+                ) {
             System.out.println("File open");
             return in.read();
         }
     }
     
     public static int readByteFromFile(String file) throws FileNotFoundException, IOException {
-        try {
             InputStream in = new FileInputStream(file);
             System.out.println("File open");
             return in.read();
-        } catch (Exception e) {
-              e.printStackTrace();
-              throw e;
-        }
+        
     }
 
     
-    public static void main(String[] arg){
-        try {
+    public static void main(String[] arg) throws Exception{
             ThrowsExample.readByteFromFile();
             ThrowsExample.readByteFromFile("MyFile");
-        } catch (IOException ex) {
-            System.err.println(ex);
-        }
+        
     }
 }

@@ -39,7 +39,7 @@ public class NullDemo implements ActionListener{
 	b1.setBounds(110,140,80,30);b2.setBounds(220,140,80,30);
         l3.setBounds(120,200,80,30);
         
-		f.setLayout( null);
+		f.setLayout(null);
 
 		f.setBackground(Color.red);
 		f.setForeground(Color.blue);

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package javaapp1;
+package corejavaexamples.gui;
 
 /**
  *

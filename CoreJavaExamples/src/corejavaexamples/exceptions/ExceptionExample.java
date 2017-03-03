@@ -6,6 +6,8 @@
 
 package corejavaexamples.exceptions;
 
+import java.util.Scanner;
+
 /**
  *
  * @author iamsu
@@ -15,14 +17,15 @@ public class ExceptionExample {
 	{
 	       try
 	       {
-		System.out.println("Program execution starts ");
-		int n=Integer.parseInt(args[0]);
+                Scanner s =new Scanner(System.in);
+                System.out.println("Program execution starts ");
+		int n=s.nextInt();
 		System.out.println("n val is :"+n);
 	       }
 	       catch(Exception e)
                {
 		System.out.println(e);
-		System.out.println("U hav to pass arguments");
+		System.out.println("U hav to pass num");
                }
                System.out.println("Program execution ends ");
 	}
